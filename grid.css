@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Prompt&display=swap'); 
+/* base styling */
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: fantasy;
+    background: url(https://cdn.spacetelescope.org/archives/images/screen/potw2241a.jpg?#);
+    background-size: cover;
+    background-position: center;
+}
+ul
+{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+h1{
+    color: rgb(241, 224, 203);
+    margin: 16px 0;
+    font-weight: 40;
+}
+h3{
+    margin: 8px 0;
+    font-weight: 700;
+}
+p{
+   font-weight: 400;/* regular*/
+   line-height: 1.5;
+   position:relative;
+   background-size:cover;
+   height: auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+foot{
+    font-weight: 400;/* regular*/
+   line-height: 1.5;
+   position:relative;
+   background-size:cover;
+   height: auto;
+   height: 80vh;
+   width: 70%;
+   padding: 2px;
+   overflow: hidden;
+}
+header{
+    line-height: 100px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+.blog-post h1{
+    color: #202020;
+}
+
+nav ul li{
+    display: inline;
+    padding: 0 16px;
+}
+nav ul li a{
+    color: rgb(20, 18, 18);
+}
+.mobile{
+    display: none;
+}
+
+@media(max-width:768px)
+{
+    nav{
+        position:static;
+    }
+    nav ul{
+        display: none;
+        width:100%;
+        background-color: gray;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 40vh;
+        text-align: center;
+    }
+}
+a.mobile{
+    color: black;
+    display: block;
+}
+.show{
+    display: block;
+}
+
+ .container
+{
+   display: grid; 
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: 100px auto 100px;
+ height: 80vh;
+ width: 70%;
+ margin: 0 auto;
+}
+header{
+    background-color: rgb(248, 253, 253);
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+aside{
+    background-color: rgb(233, 161, 18);
+  grid-column-start: span 1;
+}
+main{
+    background-color: rgb(228, 150, 137);
+    grid-column-start: span 2;
+}
+footer
+{
+    background-color: #fffffc;
+    grid-column-start:span 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration:aliceblue;
+}
+@media(max-width: 700px)
+{
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto 100px;
+    }
+    header,aside,main,footer {
+        grid-column-start: span 1;
+    }
+}
+aside{
+    padding: 64px;
+}
+aside .comments{
+    margin-top: 64px;
+}
+aside .archievs{
+    margin-top: 64px;
+}
+main{
+    padding: 32px;
+}
+footer{
+    padding: 20px;
+    height: 150px;
+
+}
